@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Angular-kurs</title>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+</head>
+
+<body ng-app="AngularKurs">
+    <div ng-controller="navController">
+        <nav class="navbar navbar-default" role="navigation">
+            <a class="navbar-brand" href="#">Angular-kurs</a>
+            <form class="navbar-form navbar-right">
+                <button class="btn btn-default" ng-click="previous()" ng-disabled="!showPrev()">Forrige</button>
+                <button class="btn btn-primary" ng-click="next()" ng-disabled="!showNext()">Neste</button>
+            </form>
+            <p class="navbar-text navbar-right" ng-cloak>{{pageNum}} / {{totalPages}}</p>
+        </nav>
+    </div>
+
+    <div class="container">
+        <div ng-view></div>
+    </div>
+
+
+    <script src="lib/angular/angular.js"></script>
+    <script src="lib/angular-route/angular-route.min.js"></script>
+    <script src="ui-bootstrap-tpls.min.js"></script>
+    <script src="js/controllers/controller.js"></script>
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>

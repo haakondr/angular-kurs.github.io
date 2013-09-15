@@ -1,0 +1,23 @@
+<h2>Two way data binding</h2>
+
+<div class="well">
+    <input ng-model="tweet">{{tweet}}
+</div>
+
+<h2>ng-disabled</h2>
+
+<div class="well">
+    <input ng-model="tweet">
+    <button ng-disabled="!tweet">Tweet!</button>
+    <p ng-show="tweet.length > 5">{{tweet}}</p>
+</div>
+
+
+<h2>Form / ng-submit</h2>
+
+<div class="well">
+    <form ng-submit="tweet()">
+        <input ng-model="message">
+        <button type="submit">Tweet!</button>
+    </form>
+</div>
