@@ -1,0 +1,16 @@
+<h2>Scope</h2>
+
+<h2>$http</h2>
+<div class="well">
+    <p>Inject $http i controller, og gjør et http get kall for å hente ut en liste med tweets fra følgende url:</p>
+    <p>Lagre listen med tweets på $scope, og vis listen i viewet.</p>
+
+    <button class="btn btn-default" ng-click="show1 = !show1">Løsningsforslag</button>
+    <div ng-show="show1">
+        <ul ng-repeat="tweet in tweets">
+            <li>{{tweet.date}} {{tweet.user.username}} - {{tweet.text}}</li>
+        </ul>
+    </div>
+</div>
+
+<h2>$location</h2>
